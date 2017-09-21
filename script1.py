@@ -25,6 +25,10 @@ def pounds_2_kg():
     kg = float(e5_value.get()) * 0.453592
     t5.insert(END, kg)
 
+def inches_2_cm():
+    cm = float(e6_value.get()) * 2.54
+    t6.insert(END, cm)
+
 b1 = Button(window, text = "Miles to Km", command= miles_2_km) #window to specify where
 b1.grid(row = 0, column = 0) #to put widget in or pack
 
@@ -39,6 +43,9 @@ b4.grid(row = 3, column = 0)
 
 b5 = Button(window, text = "Pounds to kg", command= pounds_2_kg) #window to specify where
 b5.grid(row = 4, column = 0) #to put widget in or pack
+
+b6 = Button(window, text = "Inches to cm", command= inches_2_cm) #window to specify where
+b6.grid(row = 5, column = 0) #to put widget in or pack
 
 e1_value = StringVar() #not an actual string
 e1 = Entry(window, textvariable = e1_value)
@@ -60,6 +67,10 @@ e5_value = StringVar() #not an actual string
 e5 = Entry(window, textvariable = e5_value)
 e5.grid(row = 4, column = 1)
 
+e6_value = StringVar() #not an actual string
+e6 = Entry(window, textvariable = e6_value)
+e6.grid(row = 5, column = 1)
+
 t1 = Text(window, height = 1, width = 20)
 t1.grid(row = 0, column = 2)
 
@@ -75,5 +86,7 @@ t4.grid(row = 3, column = 2)
 t5 = Text(window, height = 1, width = 20)
 t5.grid(row = 4, column = 2)
 
+t6 = Text(window, height = 1, width = 20)
+t6.grid(row = 5, column = 2)
 
 window.mainloop() #allows u to press exit button to close
